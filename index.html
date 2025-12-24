@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 메인 화면 -->
+    <div id="mainScreen" class="screen active">
+        <div class="container">
+            <h1 class="studio-title">CREATIVE STUDIO</h1>
+            <p class="studio-subtitle">나만의 창작 아카이브</p>
+            <button class="main-button" id="saveBtn">저장하기</button>
+        </div>
+    </div>
+
+    <!-- 카테고리 선택 화면 -->
+    <div id="categoryScreen" class="screen">
+        <div class="container">
+            <button class="back-btn" id="backToMain">← 뒤로</button>
+            <h2 class="category-title">카테고리 선택</h2>
+            <div class="category-grid">
+                <div class="category-card" id="videoCategory">
+                    <div class="category-icon">🎬</div>
+                    <h3>비디오</h3>
+                    <p>영상 작품 관리</p>
+                </div>
+                <div class="category-card" id="textCategory">
+                    <div class="category-icon">✍️</div>
+                    <h3>글</h3>
+                    <p>글 작품 관리</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 비디오 업로드 화면 -->
+    <div id="videoScreen" class="screen">
+        <div class="container">
+            <button class="back-btn" id="backFromVideo">← 카테고리로</button>
+            <h2 class="upload-title">비디오 업로드</h2>
+            
+            <div class="upload-form">
+                <input type="text" id="videoTitle" placeholder="영상 제목" class="input-field">
+                <textarea id="videoDesc" placeholder="영상 설명" class="textarea-field"></textarea>
+                <input type="url" id="videoUrl" placeholder="YouTube URL 또는 비디오 링크" class="input-field">
+                <button class="submit-btn" id="addVideo">업로드</button>
+            </div>
+
+            <div class="items-list" id="videoList">
+                <h3>저장된 비디오</h3>
+                <div id="videoItems"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 글 업로드 화면 -->
+    <div id="textScreen" class="screen">
+        <div class="container">
+            <button class="back-btn" id="backFromText">← 카테고리로</button>
+            <h2 class="upload-title">글 업로드</h2>
+            
+            <div class="upload-form">
+                <input type="text" id="textTitle" placeholder="글 제목" class="input-field">
+                <textarea id="textContent" placeholder="글 내용을 입력하세요..." class="textarea-field large"></textarea>
+                <button class="submit-btn" id="addText">업로드</button>
+            </div>
+
+            <div class="items-list" id="textList">
+                <h3>저장된 글</h3>
+                <div id="textItems"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
